@@ -3,11 +3,11 @@ HERE=$(readlink -f $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ))
 ROOT=$(dirname $HERE)
 
 ## CODAC
-export CODAC_VER=3.2.2
-export CODAC_REL=$CODAC_VER-r1
-export CODAC_FILE=$ROOT/deps/codac/codac_$CODAC_VER.tar.gz
-export SAMTOOLS_BIN=$ROOT/deps/bin/samtools
-export INCHWORM_BIN=$ROOT/deps/bin/inchworm
+CODAC_VER=3.2.2
+CODAC_REL=$CODAC_VER-r1
+CODAC_FILE=$ROOT/deps/codac/codac_$CODAC_VER.tar.gz
+SAMTOOLS_BIN=$ROOT/deps/bin/samtools
+INCHWORM_BIN=$ROOT/deps/bin/inchworm
 cp $CODAC_FILE $HERE/context/codac
 cp $SAMTOOLS_BIN $HERE/context/codac
 cp $INCHWORM_BIN $HERE/context/codac
