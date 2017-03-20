@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-HERE="$(readlink -f $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ))"
+HERE=$(readlink -f $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ))
 ROOT=$(dirname $HERE)
 
 ## CRISP
