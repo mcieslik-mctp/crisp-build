@@ -24,8 +24,7 @@ bash docker/build_image_codac.sh
 
 Step 5: Test images
 ```
-wget https://storage.googleapis.com/crisp-mctp/test.data/fastq/mctp_SI_12764_C8LJ1ANXX_6_1.fq.gz
-wget https://storage.googleapis.com/crisp-mctp/test.data/fastq/mctp_SI_12764_C8LJ1ANXX_6_2.fq.gz
-
+wget -P repo https://storage.googleapis.com/crisp-mctp/test.data/fastq/mctp_SI_12764_C8LJ1ANXX_6_1.fq.gz
+wget -P repo https://storage.googleapis.com/crisp-mctp/test.data/fastq/mctp_SI_12764_C8LJ1ANXX_6_2.fq.gz
 
 ```
