@@ -123,8 +123,3 @@ RUN cd /usr/local/bin && \
 
 # SUDO
 RUN echo "%sudo ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers
-
-# USERS
-ARG user
-ARG userid
-RUN useradd --no-log-init -d / -u $userid -g users -G sudo $user

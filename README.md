@@ -1,4 +1,10 @@
+Requirements:
 
+```
+$ docker -v
+Docker version 17.03.0-ce, build 60ccb22
+
+```
 Step 1: Prepare build environment
 ```
 git clone https://github.com/mctp/crisp-build
@@ -6,9 +12,10 @@ cp <<NOVOALIGN LICENSE KEY>> crisp-build/novoalign.lic
 cd crisp-build
 ```
 
-Step 2: Build GXCORE Docker image
+Step 2: Build GXBASE Docker image
 ```
 bash docker/build_image_gxcore.sh
+bash docker/build_image_gxbase.sh
 ```
 
 Step 3: Prepare dependencies
@@ -26,5 +33,4 @@ Step 5: Test images
 ```
 wget -P repo https://storage.googleapis.com/crisp-mctp/test.data/fastq/mctp_SI_12764_C8LJ1ANXX_6_1.fq.gz
 wget -P repo https://storage.googleapis.com/crisp-mctp/test.data/fastq/mctp_SI_12764_C8LJ1ANXX_6_2.fq.gz
-
 ```
