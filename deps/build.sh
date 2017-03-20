@@ -75,9 +75,9 @@ $STAR --runMode genomeGenerate --genomeDir $DEPS/refs/indices/star/Hsapiens_rRNA
       --genomeFastaFiles $DEPS/refs/genomes/Hsapiens_rRNA.fa --runThreadN 1 --genomeSAindexNbases 4
 mkdir -p $DEPS/refs/indices/star/GRCh38.analysis_set.motr-v1-125-2
 cd $DEPS/refs/indices/star/GRCh38.analysis_set.motr-v1-125-2
-# $STAR --runMode genomeGenerate --genomeDir $DEPS/refs/indices/star/GRCh38.analysis_set.motr-v1-125-2 \
-#       --genomeFastaFiles $DEPS/refs/genomes/GRCh38.analysis_set.fa --runThreadN $(cat /proc/cpuinfo  | grep 'processor      ' | wc -l) \
-#       --sjdbOverhang 125 --sjdbScore 2 --sjdbGTFfile $DEPS/refs/gtf/motr.v1/motr.v1-alig.gtf
+$STAR --runMode genomeGenerate --genomeDir $DEPS/refs/indices/star/GRCh38.analysis_set.motr-v1-125-2 \
+      --genomeFastaFiles $DEPS/refs/genomes/GRCh38.analysis_set.fa --runThreadN $(cat /proc/cpuinfo  | grep 'processor      ' | wc -l) \
+      --sjdbOverhang 125 --sjdbScore 2 --sjdbGTFfile $DEPS/refs/gtf/motr.v1/motr.v1-alig.gtf
 cd $DEPS
 
 #### CRISP
