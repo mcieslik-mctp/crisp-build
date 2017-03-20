@@ -1,2 +1,6 @@
 novoalign.lic
 docker/image
+deps/bin
+deps/refs
+deps/crisp
+deps/codac

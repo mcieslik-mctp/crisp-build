@@ -13,11 +13,13 @@ bash docker/build_image_gxcore.sh
 
 Step 3: Prepare dependencies
 ```
-bash deps/
+bash deps-build.sh
 ```
 
 Step 4: Build CRISP and CODAC Docker images
 ```
+bash docker/build_image_crisp.sh
+bash docker/build_image_codac.sh
 ```
 
 Step 5: Test images
