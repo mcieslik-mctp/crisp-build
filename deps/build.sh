@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+1;4402;0c#!/usr/bin/env bash
 export DEPS="$(readlink -f $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ))"
 export NOVO_KEY=/build/novoalign.lic
 export REFS_VER=2.0.0
@@ -72,10 +72,10 @@ STAR=$DEPS/bin/STAR
 mkdir -p $DEPS/refs/indices/star/Hsapiens_rRNA
 cd $DEPS/refs/indices/star/Hsapiens_rRNA
 $STAR --runMode genomeGenerate --genomeDir $DEPS/refs/indices/star/Hsapiens_rRNA \
-      --genomeFastaFiles $DEPS/refs/genomes/Hsapiens_rRNA.fa --runThreadN 1 --genomeSAindexNbases 4
-mkdir -p $DEPS/refs/indices/star/GRCh38.analysis_set.motr-v1-125-2
-cd $DEPS/refs/indices/star/GRCh38.analysis_set.motr-v1-125-2
-$STAR --runMode genomeGenerate --genomeDir $DEPS/refs/indices/star/GRCh38.analysis_set.motr-v1-125-2 \
+      --genomeFastaFiles $DEPS/refs/genomes/Hsapiens_rRNA.fa- --runThreadN 1 --genomeSAindexNbases 4
+mkdir -p $DEPS/refs/indices/star/GRCh38.analysis_set.motr.v1-125-2
+cd $DEPS/refs/indices/star/GRCh38.analysis_set.motr.v1-125-2
+$STAR --runMode genomeGenerate --genomeDir $DEPS/refs/indices/star/GRCh38.analysis_set.motr.v1-125-2 \
       --genomeFastaFiles $DEPS/refs/genomes/GRCh38.analysis_set.fa --runThreadN 8 \
       --sjdbOverhang 125 --sjdbScore 2 --sjdbGTFfile $DEPS/refs/gtf/motr.v1/motr.v1-alig.gtf
 cd $DEPS
