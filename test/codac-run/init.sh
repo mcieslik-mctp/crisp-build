@@ -15,8 +15,9 @@ JOB=$(basename $HERE)
 USRID=$(id -u)
 LOGDIR=$HERE/log
 TMPDIR=$HERE/tmp
+REFDIR=$ROOT/deps/refs
+CFGDIR=$ROOT/deps/codac
 REPDIR=$ROOT/repo
-REFDIR=$ROOT/refs
 RUNDIR=$HERE
 
 ## LOGS
@@ -36,6 +37,7 @@ CONTID=$(docker run -d --privileged \
                 -v $RUNDIR:/run \
                 -v $TMPDIR:/tmp \
                 -v $REFDIR:/refs \
+                -v $CFGDIR:/cfg \
                 -v $REPDIR:/repo \
                 --user $USRID \
                 $DOCKER_IMAGE /run/run.sh 2>> $JSL)

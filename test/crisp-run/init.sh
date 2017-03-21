@@ -1,22 +1,23 @@
 #!/usr/bin/env bash
 DOCKER_IMAGE="crisp:latest"
-NCORES=16
-MEMORY=6
+NCORES=8
+MEMORY=8
 SETTINGS="-lib_merge lane --debug"
 
 ##
 HERE="$(readlink -f $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ))" && cd $HERE
 ROOT="$(dirname $(dirname $HERE))"
 
-
 ##
 JOB=$(basename $HERE)
 USRID=$(id -u)
 LOGDIR=$HERE/log
 TMPDIR=$HERE/tmp
+REFDIR=$ROOT/deps/refs
 REPDIR=$ROOT/repo
-REFDIR=$ROOT/refs
 RUNDIR=$HERE
+
+echo $REFDIR
 
 ## LOGS
 echo -e $(date) >> $LOGDIR/$JOB.init.timestamp
