@@ -72,7 +72,7 @@ STAR=$DEPS/bin/STAR
 mkdir -p $DEPS/refs/indices/star/Hsapiens_rRNA
 cd $DEPS/refs/indices/star/Hsapiens_rRNA
 $STAR --runMode genomeGenerate --genomeDir $DEPS/refs/indices/star/Hsapiens_rRNA \
-      --genomeFastaFiles $DEPS/refs/genomes/Hsapiens_rRNA.fa- --runThreadN 1 --genomeSAindexNbases 4
+      --genomeFastaFiles $DEPS/refs/genomes/Hsapiens_rRNA.fa --runThreadN 1 --genomeSAindexNbases 4
 mkdir -p $DEPS/refs/indices/star/GRCh38.analysis_set.motr.v1-125-2
 cd $DEPS/refs/indices/star/GRCh38.analysis_set.motr.v1-125-2
 $STAR --runMode genomeGenerate --genomeDir $DEPS/refs/indices/star/GRCh38.analysis_set.motr.v1-125-2 \
