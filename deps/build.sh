@@ -1,4 +1,4 @@
-1;4402;0c#!/usr/bin/env bash
+#!/usr/bin/env bash
 export DEPS="$(readlink -f $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ))"
 export NOVO_KEY=/build/novoalign.lic
 export REFS_VER=2.0.0

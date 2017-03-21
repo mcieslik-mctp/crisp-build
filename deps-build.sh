@@ -4,4 +4,4 @@ docker run --privileged \
        -v /tmp:/tmp \
        -v $HERE:/build \
        --hostname=$HOSTNAME -e USER=$USER --user=$USER -e HOME=/build -w /build \
-       "gxcore:latest" /build/deps/build.sh
+       "gxuser:latest" /build/deps/build.sh
